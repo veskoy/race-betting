@@ -11,7 +11,7 @@ describe RaceBet::Race do
     let(:guesses) { [1,2,3] }
     let(:winners) { guesses }
 
-    it "calculates 15, 10, 3 points respectively for correct guesses" do
+    it "calculates 15, 10, 5 points respectively for correct guesses" do
       expect(subject).to eq(15 + 10 + 5)
     end
   end
