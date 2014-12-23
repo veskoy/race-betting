@@ -70,4 +70,11 @@ describe RaceBet::Race do
     end
     it { expect(subject).to eq(15 + 1) }
   end
+
+  context "README example" do
+    let(:guesses) { [:bob, :mark, :walter] }
+    let(:winners) { [:mark, :bob, :walter] }
+
+    it { expect(subject).to eq(5 + 1 + 1) }
+  end
 end
