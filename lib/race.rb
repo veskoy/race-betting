@@ -16,7 +16,7 @@ module RaceBet
     def calculate_score
       @guesses.each_with_index do |prediction, index|
         @score += AWARDS[index] and next if prediction == @winners[index]
-        @score += 1 if @winners.include?(prediction)
+        @score += 1 if @winners[0..4].include?(prediction)
       end
     end
 
