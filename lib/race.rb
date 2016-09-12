@@ -3,7 +3,7 @@ module RaceBet
 
     AWARDS = [15, 10, 5, 3, 1].freeze
 
-    attr_accessor :score
+    attr_reader :score
 
     def initialize(guesses, winners)
       @guesses, @winners = guesses, winners
