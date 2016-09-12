@@ -1,6 +1,8 @@
 module RaceBet
   class Race
 
+    AWARDS = [15, 10, 5, 3, 1]
+
     attr_accessor :score
 
     def initialize(guesses, winners)
@@ -11,12 +13,10 @@ module RaceBet
 
     private
 
-    AWARDS = [15, 10, 5, 3, 1]
-
     def calculate_score
-      @guesses.each_with_index do |value, index|
-        self.score += AWARDS[index] and next if value == @winners[index]
-        self.score += 1 if @winners.include?(value)
+      @guesses.each_with_index do |prediction, index|
+        @score += AWARDS[index] and next if prediction == @winners[index]
+        @score += 1 if @winners.include?(prediction)
       end
     end
 
