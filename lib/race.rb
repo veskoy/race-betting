@@ -1,7 +1,7 @@
 module RaceBet
   class Race
 
-    AWARDS = [15, 10, 5, 3, 1]
+    AWARDS = [15, 10, 5, 3, 1].freeze
 
     attr_accessor :score
 
